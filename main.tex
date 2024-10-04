@@ -70,6 +70,16 @@
   }
 }
 
+%----------------Project-Description-Spacer--------
+
+\newcommand{\resumeProjectDescription}[2]{
+    \resumeItem{\emph{#1}}
+    \vspace{-0.25cm}
+    \resumeItem{#2}
+}
+
+
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -123,12 +133,15 @@
 
 %-----------SUMMARY-OF-QUALIFICATIONS-----
 
-\section{Summary of Qualifications}
+\section{Summary}
+% \section{Summary of Qualifications}
     \resumeItemListStart
-        \resumeItem{Third-year Computer Engineering student with a specialization in embedded systems, focusing on microprocessor design, VHDL scripting, and FPGA board testing and development.}
-        \resumeItem{Highly Proficient in C/C++ and Python, with strong expertise in designing and implementing hardware-software integration for embedded system applications.}
-        \resumeItem{Working knowledge with VHDL for microprocessor design, utilizing FPGA boards to test, validate, and optimize system functionality.}
-        \resumeItem{Strong foundation in advanced mathematics, including Analysis, Algebra, Combinatorics, Cryptography, and Logic, applying mathematical techniques to enhance embedded system design.}
+        % \resumeItem{Third-year Computer Engineering student, specializing in embedded systems, microprocessor design, VHDL scripting, FPGA development, and proficient in C/C++ for embedded systems.}
+        % \resumeItem{Independently designed, developed, tested, and debugged embedded C projects, using breakpoints and global variable counters for logic optimization; skilled in RTOS and Linux.}
+        % \resumeItem{Self-starter and highly motivated, with experience in assembly language and a strong ability to work autonomously while mastering complex systems and development workflows.}
+        \resumeItem{Third-year Computer Engineering student, specializing in embedded systems, microprocessor design, VHDL scripting, FPGA development, and proficient in C/C++ \& Python; experienced with RTOS, Linux, and assembly language.}
+        \resumeItem{Independently designed, developed, tested, and debugged embedded C projects; a self-starter with a strong ability to work autonomously and collaborate effectively within cross-functional teams on complex systems.}
+        % \resumeItem{Strong foundation in advanced mathematics, including Analysis, Algebra, Combinatorics, Cryptography, and Logic, applying mathematical techniques to enhance embedded system design.}
     \resumeItemListEnd
 
 %-----------EDUCATION-----------
@@ -136,24 +149,31 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Ryerson University}{Toronto, ON}
-      {Bachelor of Engineering in Computer Engineering}{Sep. 2022 -- Exp. Aug. 2027}
+      {Bachelor of Engineering in \textbf{Computer Engineering}}{Sep. 2022 -- Exp. Aug. 2027}
       % {}{}
-      \resumeItem{\textit{Minor in Mathematics \& Physics}}
+      \resumeItem{\textit{Minor in \textbf{Mathematics} (Focus on Analysis) \& \textbf{Physics} (Focus on Quantum Mechanics)}}
       %-----------------CGPA------------------
       % \resumeItem{\hspace{1cm}\textit{cGPA : 2.81 (70\% average)}}
     % \resumeSubheading
-    %   {Blinn College}{Bryan, TX}
-    %   {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+    %   {Modern Academy}{Dubai, AE}
+    %   {International Baccalaureate (IB) Diploma}{Sep. 2020 -- June 2022}
+    %   \resumeItem{\textit{\textbf{Higher Level Subjects}: Mathematics, Physics, Chemistry}}
+    %   % \vspace{-0.25cm}
+    %   \resumeItem{\hspace{1cm}\textit{Score : 40/45 (98\% average)}}
   \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+%-----------SKILLS-----------
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C/C++, Python, VHDL, JavaScript, Java, HTML/CSS} \\
-     \textbf{Frameworks}{: FreeRTOS, PlatformIO, React.js, Node.js, JUnit} \\
+     \textbf{Languages}{: C/C++, Python, VHDL, Assembly, JavaScript, MATLAB, LaTeX, Java, HTML/CSS} \\
+     \textbf{Frameworks}{: GCC, LLVM/Clang, GDB, FreeRTOS, PlatformIO, JUnit, React.js, Node.js, APT, PIP} \\
      \textbf{Libraries}{: Tensorflow, NumPy, pandas, Matplotlib, AVR-LibC} \\
-     \textbf{Developer Tools}{: Git, VS Code, RTOS, Linux, Visual Studio, Docker, PyCharm, Arduino, Altera Quartus II} \\
+     \textbf{Hardware}{: Arduino UNO R3/Nano (AVR), ESP32/8266, FPGA (Altera), Raspberry Pi 3, Motorola 68HC12, GPIO} \\
+     % \textbf{Developer Boards}{: Arduino UNO R3/Nano, ESP32, } \\
+     \textbf{Protocols}{: UART, SPI, I2C, TCP/IP} \\
+     \textbf{Developer Tools}{: Git, VS Code, RTOS, Linux (Ubuntu/Debian), Vim, Docker, PyCharm, Altera Quartus II, ModelSim} \\
+     \textbf{Soft Skills}{: Team Player, Quick Learner, Leader, Effective Communicator} \\
     }}
  \end{itemize}
 
@@ -161,50 +181,72 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{8-Bit Custom CPU Design \& FPGA Implementation} $|$ \emph{VHDL, FPGA, Git}}{Nov. 2023}
+          {\textbf{8-Bit Custom CPU Design \& FPGA Implementation} $|$ \emph{VHDL, FPGA, Quartus II, ModelSim, Git}}{Nov. 2023}
+          \resumeProjectDescription{Individual project at university}{Designed and implemented a custom 8-bit CPU architecture using VHDL, focusing on executing arithmetic and logic operations.}
+          % \resumeItem{\emph{Individual project at university}}
+          % \vspace{-0.25cm}
+          % \resumeItem{Designed and implemented a custom 8-bit CPU architecture using VHDL, focusing on executing arithmetic and logic operations.}
           \resumeItemListStart
-            \resumeItem{Engineered a custom CPU architecture using VHDL, integrating a robust Arithmetic Logic Unit (ALU), Control Unit (Finite State Machine and Decoder), and I/O registers to execute complex arithmetic and logic operations on 8-bit inputs.}
-            \resumeItem{Developed a high-performance ALU supporting operations such as addition, subtraction, bitwise manipulations (AND, OR, XOR), and advanced functions like bit shifts and rotations, controlled via a state-driven FSM and 4:16 decoder.}
-            \resumeItem{Simulated, verified and optimized the CPU’s operation in Quartus, utilizing waveform analysis (timing analysis) to validate accurate real-time processing of input signals, control opcodes, and clock cycles before FPGA synthesis.}
-            \resumeItem{Synthesized and implemented the CPU on an FPGA, using external inputs and seven-segment displays to visualize real-time outputs, successfully demonstrating the integration and operation of all components.}
+            % \resumeItem{Engineered a custom CPU architecture using VHDL, integrating a robust Arithmetic Logic Unit (ALU), Control Unit (Finite State Machine and Decoder), and I/O registers to execute complex arithmetic and logic operations on 8-bit inputs.}
+            % \resumeItem{Developed a high-performance ALU supporting operations such as addition, subtraction, bitwise manipulations (AND, OR, XOR), and advanced functions like bit shifts and rotations, controlled via a state-driven FSM and 4:16 decoder.}
+            % \resumeItem{Simulated, verified and optimized the CPU’s operation in Quartus, utilizing waveform analysis (timing analysis) to validate accurate real-time processing of input signals, control opcodes, and clock cycles before FPGA synthesis.}
+            % \resumeItem{Synthesized and implemented the CPU on an FPGA, using external inputs and seven-segment displays to visualize real-time outputs, successfully demonstrating the integration and operation of all components.}
+            \resumeItem{Designed and implemented a robust ALU and Control Unit (FSM and 4:16 Decoder) to perform 8-bit operations, including addition, subtraction, bitwise logic (AND, OR, XOR), bit shifts, and rotations.}
+            \resumeItem{Simulated, verified, optimized, and synthesized CPU performance in Quartus using waveform analysis to ensure real-time signal processing, accurate opcode execution, and clock cycle precision, then implemented the design on FPGA with real-time output on seven-segment displays.}
           \resumeItemListEnd
           \resumeProjectHeading
-          {\textbf{Intelligent Home Energy Optimization System} $|$ \emph{C/C++, Arduino, Python, Git}}{Feb. 2023}
+          {\textbf{Intelligent Home Energy Optimization System} $|$ \emph{C/C++, Arduino, Python, PlatformIO, Git}}{Feb. 2023}
+          \resumeProjectDescription{Team Project (2 members)}{Developed an intelligent home energy system using a Raspberry Pi 3B and Arduino Uno R3/Nano to automate energy-efficient control of lighting and computer display systems.}
           \resumeItemListStart
-            \resumeItem{Developed and implemented an intelligent home energy optimization system leveraging a Raspberry Pi 3B and Arduino Uno R3/Nano, seamlessly integrating motion sensors and relays to automate energy-efficient control of lighting and multiple display systems.}
-            \resumeItem{Engineered a seamless integration of motion sensors \& relays with microcontrollers, enabling real-time, occupancy-based automation of lighting and appliances for optimized energy usage and dynamic environmental control.}
-            \resumeItem{Designed and implemented a low-power, efficient circuitry powered by a 5\emph{V}, 1\emph{A} source, ensuring consistent, reliable performance across all system components.}
-            \resumeItem{Achieved a 64.6\% reduction in electricity consumption for both lighting and monitor displays, showcasing significant energy savings through innovative automation and intelligent system design.}
+            % \resumeItem{Developed and implemented an intelligent home energy optimization system leveraging a Raspberry Pi 3B and Arduino Uno R3/Nano, seamlessly integrating motion sensors and relays to automate energy-efficient control of lighting and multiple display systems.}
+            % \resumeItem{Engineered a seamless integration of motion sensors \& relays with microcontrollers, enabling real-time, occupancy-based automation of lighting and appliances for optimized energy usage and dynamic environmental control.}
+            % \resumeItem{Designed and implemented a low-power, efficient circuitry powered by a 5\emph{V}, 1\emph{A} source, ensuring consistent, reliable performance across all system components.}
+            % \resumeItem{Achieved a 64.6\% reduction in electricity consumption for both lighting and monitor displays, showcasing significant energy savings through innovative automation and intelligent system design.}
+            \resumeItem{Interfaced and integrated motion sensors and relays with microcontrollers, enabling real-time, occupancy-based automation of appliances to optimize energy usage and environmental control.}
+            \resumeItem{Designed and implemented low-power circuitry powered by a 5V, 1A source, achieving a \textbf{64.6\%} reduction in electricity consumption for lighting and monitor displays.}
           \resumeItemListEnd
+          \resumeProjectHeading
+          {\textbf{Firmware Engineer} $|$ \emph{C/C++, Arduino, ESP32/8266, Teensy, PlatformIO, Python, Git}}{Mar. 2024}
+      % {Ryerson Rams Robotics (Engineering Design Team)}{Toronto, ON}
+      \resumeProjectDescription{Team project ($\sim$75 members) at Ryerson Rams Robotics, Toronto, ON}{Developed and optimized embedded firmware for a Mars rover and custom controller, interfacing 15+ sensors and motors for real-time operations and remote monitoring.}
+      \resumeItemListStart
+        % \resumeItem{Engineered and optimized embedded firmware in C/C++ for a Mars rover and custom controller, interfacing with a diverse array of sensors (soil, air, water, temperature, pressure, UV, infrared, etc.) to collect, process, and trigger data-driven operations in real-time.}
+        % \resumeItem{Integrated multi-sensor data processing to dynamically control rover operations based on environmental readings while receiving movement commands via radio from both the controller and remote server for seamless navigation and task execution.}
+        % \resumeItem{Designed and implemented advanced communication protocols to transmit real-time sensor data and GPS coordinates from the Mars rover to a remote server, enabling live monitoring through an intuitive, aesthetically designed GUI.}
+        % \resumeItem{Deployed and programmed multiple Teensy and AVR microcontrollers, ensuring coordinated operation of sensors, motors, and communication modules while addressing complex wiring requirements and maintaining optimal system performance within tight resource constraints.}
+        % \resumeItem{Enhanced system efficiency through advanced memory management and algorithmic optimization, ensuring maximum computational throughput and real-time performance for sensor-driven operations and bidirectional communication with external systems.}
+        \resumeItem{Interfaced multiple sensors (soil, air, water, temperature, pressure, UV, infrared) and motors with ESP32, Teensy, and Arduino microcontrollers, developing and optimizing embedded C/C++ firmware for real-time operations; refactored code to reduce memory usage and improve performance using algorithmic enhancements.}
+        \resumeItem{Designed and integrated multi-sensor data processing for dynamic rover control, receiving commands via radio from the controller and remote server; implemented communication protocols to transmit real-time sensor data and GPS coordinates to a remote server for live monitoring via a GUI.}
+      \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 
 % ----------Adding-0-Experience-----
 
-\section{Experience}
-  \resumeSubHeadingListStart
+% \section{Experience}
+%   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Signal Communications Engineer}{Apr 2024 -- Present}
-      {CombatCraft (Engineering Design Team)}{Toronto, ON}
-      \resumeItemListStart
-        \resumeItem{Engineered and implemented a robust communication system for robotic and controller networks, leveraging the nRF24L01 module to establish efficient, long-range serial communication via radio frequencies, significantly improving system reliability.}
-        \resumeItem{Developed and integrated an ESP32 module to transmit real-time telemetry data from the robot and controller to a remote server, enabling seamless monitoring of system performance and diagnostics by the management team.}
-        \resumeItem{Conducted comprehensive testing, validation, and optimization of communication protocols, achieving a 15\% improvement in transmission efficiency by reducing latency and enhancing data integrity over long distances.}
-        \resumeItem{Refined system architecture through iterative design processes, ensuring consistent and reliable communication across extended distances while significantly enhancing overall system performance and scalability.}
-      \resumeItemListEnd
+%     \resumeSubheading
+%       {Signal Communications Engineer}{Apr 2024 -- Present}
+%       {CombatCraft (Engineering Design Team)}{Toronto, ON}
+%       \resumeItemListStart
+%         \resumeItem{Engineered and implemented a robust communication system for robotic and controller networks, leveraging the nRF24L01 module to establish efficient, long-range serial communication via radio frequencies, significantly improving system reliability.}
+%         \resumeItem{Developed and integrated an ESP32 module to transmit real-time telemetry data from the robot and controller to a remote server, enabling seamless monitoring of system performance and diagnostics by the management team.}
+%         \resumeItem{Conducted comprehensive testing, validation, and optimization of communication protocols, achieving a 15\% improvement in transmission efficiency by reducing latency and enhancing data integrity over long distances.}
+%         \resumeItem{Refined system architecture through iterative design processes, ensuring consistent and reliable communication across extended distances while significantly enhancing overall system performance and scalability.}
+%       \resumeItemListEnd
 
-      \resumeSubheading
-      {Firmware Engineer}{Oct 2022 -- Present}
-      {Ryerson Rams Robotics (Engineering Design Team)}{Toronto, ON}
-      \resumeItemListStart
-        \resumeItem{Engineered and optimized embedded firmware in C/C++ for a Mars rover and custom controller, interfacing with a diverse array of sensors (soil, air, water, temperature, pressure, UV, infrared, etc.) to collect, process, and trigger data-driven operations in real-time.}
-        \resumeItem{Integrated multi-sensor data processing to dynamically control rover operations based on environmental readings while receiving movement commands via radio from both the controller and remote server for seamless navigation and task execution.}
-        \resumeItem{Designed and implemented advanced communication protocols to transmit real-time sensor data and GPS coordinates from the Mars rover to a remote server, enabling live monitoring through an intuitive, aesthetically designed GUI.}
-        \resumeItem{Deployed and programmed multiple Teensy and AVR microcontrollers, ensuring coordinated operation of sensors, motors, and communication modules while addressing complex wiring requirements and maintaining optimal system performance within tight resource constraints.}
-        \resumeItem{Enhanced system efficiency through advanced memory management and algorithmic optimization, ensuring maximum computational throughput and real-time performance for sensor-driven operations and bidirectional communication with external systems.}
-      \resumeItemListEnd
+%       \resumeSubheading
+%       {Firmware Engineer}{Oct 2022 -- Present}
+%       {Ryerson Rams Robotics (Engineering Design Team)}{Toronto, ON}
+%       \resumeItemListStart
+%         \resumeItem{Engineered and optimized embedded firmware in C/C++ for a Mars rover and custom controller, interfacing with a diverse array of sensors (soil, air, water, temperature, pressure, UV, infrared, etc.) to collect, process, and trigger data-driven operations in real-time.}
+%         \resumeItem{Integrated multi-sensor data processing to dynamically control rover operations based on environmental readings while receiving movement commands via radio from both the controller and remote server for seamless navigation and task execution.}
+%         \resumeItem{Designed and implemented advanced communication protocols to transmit real-time sensor data and GPS coordinates from the Mars rover to a remote server, enabling live monitoring through an intuitive, aesthetically designed GUI.}
+%         \resumeItem{Deployed and programmed multiple Teensy and AVR microcontrollers, ensuring coordinated operation of sensors, motors, and communication modules while addressing complex wiring requirements and maintaining optimal system performance within tight resource constraints.}
+%         \resumeItem{Enhanced system efficiency through advanced memory management and algorithmic optimization, ensuring maximum computational throughput and real-time performance for sensor-driven operations and bidirectional communication with external systems.}
+%       \resumeItemListEnd
 
 %  \resumeSubHeadingListEnd
 
