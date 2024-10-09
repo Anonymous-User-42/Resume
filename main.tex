@@ -74,11 +74,17 @@
 
 \newcommand{\resumeProjectDescription}[2]{
     \resumeItem{\emph{#1}}
-    \vspace{-0.25cm}
+    \vspace{-0.20cm}    %   Space was originally -0.25cm but this created an un-aesthetic look at the project description when bolded. Revert to -0.25cm if project count is 3 or less
     \resumeItem{#2}
 }
 
+\newcommand{\spaceReducer}{ % To be used outside the functions and strictly after the section end to reduce space between sections
+    \vspace{-0.5cm}
+}
 
+\newcommand{\spaceReducerMini}{ % To be used inside the function itself when /spaceReducer does not work
+    \vspace{-0.25cm}
+}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
@@ -139,10 +145,11 @@
         % \resumeItem{Third-year Computer Engineering student, specializing in embedded systems, microprocessor design, VHDL scripting, FPGA development, and proficient in C/C++ for embedded systems.}
         % \resumeItem{Independently designed, developed, tested, and debugged embedded C projects, using breakpoints and global variable counters for logic optimization; skilled in RTOS and Linux.}
         % \resumeItem{Self-starter and highly motivated, with experience in assembly language and a strong ability to work autonomously while mastering complex systems and development workflows.}
-        \resumeItem{Third-year Computer Engineering student, specializing in embedded systems, microprocessor design, VHDL scripting, FPGA development, and proficient in C/C++ \& Python; experienced with RTOS, Linux, and assembly language.}
-        \resumeItem{Independently designed, developed, tested, and debugged embedded C projects; a self-starter with a strong ability to work autonomously and collaborate effectively within cross-functional teams on complex systems.}
+        \resumeItem{Third-year Computer Engineering student, \textbf{specializing in embedded systems}, microprocessor design, VHDL scripting, FPGA development, and \textbf{proficient in C/C++ \& Python}; experienced with RTOS, Linux, and assembly language.}
+        \resumeItem{\textbf{Independently designed, developed, tested}, and \textbf{debugged} embedded C projects; a self-starter with a strong ability to work autonomously and collaborate effectively within cross-functional teams on complex systems.}
         % \resumeItem{Strong foundation in advanced mathematics, including Analysis, Algebra, Combinatorics, Cryptography, and Logic, applying mathematical techniques to enhance embedded system design.}
     \resumeItemListEnd
+    \spaceReducer
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -151,6 +158,9 @@
       {Ryerson University}{Toronto, ON}
       {Bachelor of Engineering in \textbf{Computer Engineering}}{\textbf{Sep. 2022 -- Exp. Aug. 2027}}
       % {}{}
+      \vspace{0.05cm}
+      \resumeItem{\hspace{0.5cm}\textit{\textbf{Relevant Courses}: Data Structures \& Algorithms, Digital Logic, Microprocessor Systems}}
+      %{}{}
       \resumeItem{\textit{Minor in \textbf{Mathematics} (Focus on Analysis) \& \textbf{Physics} (Focus on Quantum Mechanics)}}
       %-----------------CGPA------------------
       % \resumeItem{\hspace{1cm}\textit{cGPA : 2.81 (70\% average)}}
@@ -160,14 +170,16 @@
     %   \resumeItem{\textit{\textbf{Higher Level Subjects}: Mathematics, Physics, Chemistry}}
     %   % \vspace{-0.25cm}
     %   \resumeItem{\hspace{1cm}\textit{Score : 40/45 (98\% average)}}
+    \spaceReducerMini
   \resumeSubHeadingListEnd
+  % \spaceReducer
 
 %-----------SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: C/C++, Python, VHDL, Assembly, JavaScript, MATLAB, LaTeX, Bash, Wolfram, Java, HTML/CSS} \\
-     \textbf{Frameworks}{: GCC, LLVM/Clang, GDB, FreeRTOS, PlatformIO, JUnit, React.js, Node.js, APT, PIP} \\
+     \textbf{Frameworks}{: GCC, LLVM/Clang, GDB, FreeRTOS, PlatformIO, JUnit, ROS, React.js, Node.js, APT, PIP} \\
      \textbf{Libraries}{: Tensorflow, NumPy, pandas, Matplotlib, AVR-LibC, HAL} \\
      \textbf{Hardware}{: Arduino UNO R3/Nano (AVR), ESP32/8266, FPGA (Altera), Raspberry Pi 3, Motorola 68HC12, GPIO} \\
      % \textbf{Developer Boards}{: Arduino UNO R3/Nano, ESP32, } \\
@@ -176,21 +188,31 @@
      \textbf{Soft Skills}{: Team Player, Quick Learner, Leader, Effective Communicator} \\
     }}
     % \textbf{Certifications}{: }
+    \spaceReducerMini
  \end{itemize}
+ % \spaceReducer
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+        \resumeProjectHeading{\textbf{Battle Bot Communication System} $|$ \emph{C/C++, SPI, UART, Arduino, ESP32, nRF24L01, Git}}{\textbf{May 2024}}
+      \resumeProjectDescription{Team project ($\sim$35 members) at CombatCraft, Toronto, ON}{\textbf{Developed and implemented} a long-range communication system for a battle bot and controller, leveraging the \textbf{nRF24L01} module and \textbf{ESP32} for \textbf{reliable radio-frequency communication}.}
+      \resumeItemListStart
+        \resumeItem{\textbf{Engineered} communication protocols to \textbf{improve transmission efficiency by 15\%}, reduce latency, and enhance data integrity over long distances. \textbf{Integrated ESP32} for real-time data transmission to a remote server and \textbf{conducted comprehensive testing and validation} to ensure scalability and reliable communication over distances \textbf{up to 25 meters}.}
+        % \resumeItem{\textbf{Conducted comprehensive testing and validation} to ensure scalability and consistent communication across extended distances up to \textbf{25 meters}.}
+      \resumeItemListEnd
+      %{}{}
         \resumeProjectHeading
               {\textbf{Rover Firmware Development} $|$ \emph{C/C++, Arduino, ESP32/8266, Teensy, PlatformIO, Python, Git}}{\textbf{Mar. 2024}}
-          \resumeProjectDescription{Team project ($\sim$75 members) at Ryerson Rams Robotics, Toronto, ON}{Developed and optimized embedded firmware for a Mars rover and custom controller, interfacing 15+ sensors and 10+ motors for real-time operations and remote monitoring.}
+          \resumeProjectDescription{Team project ($\sim$75 members) at Ryerson Rams Robotics, Toronto, ON}{\textbf{Developed and optimized} embedded firmware for a Mars rover, interfacing \textbf{15+ sensors} (soil, air, water, temperature, pressure, UV, infrared) and \textbf{10+ motors} using \textbf{AVR} based microcontrollers for real-time operations.}
           \resumeItemListStart
-            \resumeItem{Interfaced multiple sensors (soil, air, water, temperature, pressure, UV, infrared) and motors with ESP32, Teensy, and Arduino microcontrollers, developing and optimizing embedded C/C++ firmware for real-time operations; refactored code to reduce memory usage and improve performance using algorithmic enhancements.}
-            \resumeItem{Designed and integrated multi-sensor data processing for dynamic rover control, receiving commands via radio from the controller and remote server; implemented communication protocols to transmit real-time sensor data and GPS coordinates to a remote server for live monitoring via a GUI.}
+            % \resumeItem{Interfaced multiple sensors (soil, air, water, temperature, pressure, UV, infrared) and motors with ESP32, Teensy, and Arduino microcontrollers, developing and optimizing embedded C/C++ firmware for real-time operations; refactored code to reduce memory usage and improve performance using algorithmic enhancements.}
+            \resumeItem{\textbf{Refactored code} to reduce memory usage and improve performance using algorithmic enhancements, \textbf{implemented ROS (Robot Operating System)} for sensor integration and communication, and designed multi-sensor data processing for dynamic rover control. Also \textbf{implemented communication protocols} to transmit real-time sensor data and GPS coordinates for live monitoring via a GUI.}
+            % \resumeItem{Designed and integrated multi-sensor data processing for dynamic rover control, receiving commands via radio from the controller and remote server; implemented communication protocols to transmit real-time sensor data and GPS coordinates to a remote server for live monitoring via a GUI.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{8-Bit Custom CPU Design \& FPGA Implementation} $|$ \emph{VHDL, FPGA, Quartus II, ModelSim, Git}}{\textbf{Nov. 2023}}
-          \resumeProjectDescription{Individual project at university}{Designed and implemented a custom 8-bit CPU architecture using VHDL, focusing on executing arithmetic and logic operations.}
+          \resumeProjectDescription{Individual project at university}{\textbf{Designed and implemented} a custom 8-bit CPU architecture in \textbf{VHDL}, featuring an ALU and Control Unit (FSM and 4:16 Decoder) to perform arithmetic, logic (AND, OR, XOR), and bit-shifting operations.}
           % \resumeItem{\emph{Individual project at university}}
           % \vspace{-0.25cm}
           % \resumeItem{Designed and implemented a custom 8-bit CPU architecture using VHDL, focusing on executing arithmetic and logic operations.}
@@ -199,19 +221,19 @@
             % \resumeItem{Developed a high-performance ALU supporting operations such as addition, subtraction, bitwise manipulations (AND, OR, XOR), and advanced functions like bit shifts and rotations, controlled via a state-driven FSM and 4:16 decoder.}
             % \resumeItem{Simulated, verified and optimized the CPU’s operation in Quartus, utilizing waveform analysis (timing analysis) to validate accurate real-time processing of input signals, control opcodes, and clock cycles before FPGA synthesis.}
             % \resumeItem{Synthesized and implemented the CPU on an FPGA, using external inputs and seven-segment displays to visualize real-time outputs, successfully demonstrating the integration and operation of all components.}
-            \resumeItem{Designed and implemented a robust ALU and Control Unit (FSM and 4:16 Decoder) to perform 8-bit operations, including addition, subtraction, bitwise logic (AND, OR, XOR), bit shifts, and rotations.}
-            \resumeItem{Simulated, verified, optimized, and synthesized CPU performance in Quartus using waveform analysis to ensure real-time signal processing, accurate opcode execution, and clock cycle precision, then implemented the design on FPGA with real-time output on seven-segment displays.}
+            % \resumeItem{Designed and implemented a robust ALU and Control Unit (FSM and 4:16 Decoder) to perform 8-bit operations, including addition, subtraction, bitwise logic (AND, OR, XOR), bit shifts, and rotations.}
+            \resumeItem{\textbf{Simulated}, \textbf{verified}, \textbf{optimized}, and \textbf{synthesized} CPU performance in \textbf{Quartus} using \textbf{ModelSim} for waveform analysis. \textbf{Optimized the FSM} in the Control Unit with \textbf{state minimization}, increasing clock frequency by \textbf{10\%} and opcode execution by \textbf{25\%}. \textbf{Implemented} on \textbf{FPGA} with real-time output on seven-segment displays.}
           \resumeItemListEnd
           \resumeProjectHeading
           {\textbf{Intelligent Home Energy Optimization System} $|$ \emph{C/C++, Arduino, Python, PlatformIO, Git}}{\textbf{Feb. 2023}}
-          \resumeProjectDescription{Team Project (2 members)}{Developed an intelligent home energy system using a Raspberry Pi 3B and Arduino Uno R3/Nano to automate energy-efficient control of lighting and computer display systems.}
+          \resumeProjectDescription{Team Project (2 members)}{\textbf{Developed} an intelligent home energy system using a \textbf{Raspberry Pi 3B/4B} and \textbf{Arduino Uno R3/Nano} to \textbf{automate real-time}, energy-efficient control of lighting and computer display systems based on room occupancy.}
           \resumeItemListStart
             % \resumeItem{Developed and implemented an intelligent home energy optimization system leveraging a Raspberry Pi 3B and Arduino Uno R3/Nano, seamlessly integrating motion sensors and relays to automate energy-efficient control of lighting and multiple display systems.}
             % \resumeItem{Engineered a seamless integration of motion sensors \& relays with microcontrollers, enabling real-time, occupancy-based automation of lighting and appliances for optimized energy usage and dynamic environmental control.}
             % \resumeItem{Designed and implemented a low-power, efficient circuitry powered by a 5\emph{V}, 1\emph{A} source, ensuring consistent, reliable performance across all system components.}
             % \resumeItem{Achieved a 64.6\% reduction in electricity consumption for both lighting and monitor displays, showcasing significant energy savings through innovative automation and intelligent system design.}
-            \resumeItem{Interfaced and integrated motion sensors and relays with microcontrollers, enabling real-time, occupancy-based automation of appliances to optimize energy usage and environmental control.}
-            \resumeItem{Designed and implemented low-power circuitry powered by a 5V, 1A source, achieving a \textbf{64.6\%} reduction in electricity consumption for lighting and monitor displays.}
+            % \resumeItem{Interfaced and integrated motion sensors and relays with microcontrollers, enabling real-time, occupancy-based automation of appliances to optimize energy usage and environmental control.}
+            \resumeItem{\textbf{Interfaced and integrated} motion sensors and EM relays with microcontrollers, \textbf{designed low-power circuitry} powered by a 5V, 1A source, achieving a \textbf{64.6\% reduction} in electricity consumption for lighting and computer display systems.}
           \resumeItemListEnd
       %     \resumeProjectHeading
       %     {\textbf{Firmware Engineer} $|$ \emph{C/C++, Arduino, ESP32/8266, Teensy, PlatformIO, Python, Git}}{\textbf{Mar. 2024}}
@@ -225,6 +247,12 @@
       %   % \resumeItem{Enhanced system efficiency through advanced memory management and algorithmic optimization, ensuring maximum computational throughput and real-time performance for sensor-driven operations and bidirectional communication with external systems.}
       %   \resumeItem{Interfaced multiple sensors (soil, air, water, temperature, pressure, UV, infrared) and motors with ESP32, Teensy, and Arduino microcontrollers, developing and optimizing embedded C/C++ firmware for real-time operations; refactored code to reduce memory usage and improve performance using algorithmic enhancements.}
       %   \resumeItem{Designed and integrated multi-sensor data processing for dynamic rover control, receiving commands via radio from the controller and remote server; implemented communication protocols to transmit real-time sensor data and GPS coordinates to a remote server for live monitoring via a GUI.}
+      % \resumeItemListEnd
+      % \resumeProjectHeading{\textbf{Battle Bot Communication System} $|$ \emph{C/C++, Arduino, ESP32, nRF24L01, Git}}{\textbf{May 2024}}
+      % \resumeProjectDescription{Team project ($\sim$35 members) at CombatCraft, Toronto, ON}{\textbf{Developed and implemented} a long-range communication system for a battle bot and controller, leveraging the nRF24L01 module and ESP32 for reliable radio-frequency communication.}
+      % \resumeItemListStart
+      %   \resumeItem{\textbf{Engineered} communication protocols to \textbf{improve transmission efficiency by 15\%}, reduce latency, and enhance data integrity over long distances. Integrated ESP32 for real-time data transmission to a remote server, enabling seamless performance monitoring and diagnostics.}
+      %   \resumeItem{\textbf{Conducted comprehensive testing and validation} to ensure scalability and consistent communication across extended distances up to \textbf{25 meters}.}
       % \resumeItemListEnd
     \resumeSubHeadingListEnd
 
