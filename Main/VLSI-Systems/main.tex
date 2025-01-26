@@ -23,47 +23,12 @@
 \input{glyphtounicode}
 
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+%----------FORMAT DESCRIPTOR----------
 
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\input{Main/Common/format_description_std}
 
+%-----------CUSTOM COMMANDS------------
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -124,17 +89,8 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape Sayeed Ahamad} \\ \vspace{1pt}
-    \small +1 (437) 268-4292 $|$ \href{mailto:jobappahamad@gmail.com}{\underline{jobappahamad@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/sayeed-ahamad}{\underline{linkedin.com/in/sayeed-ahamad}} $|$
-    \href{https://github.com/Anonymous-User-42}{\underline{github.com/Anonymous-User-42}}
-\end{center}
+\input{Main/Common/header_std}
 
 
 %-----------SUMMARY-OF-QUALIFICATIONS-----
