@@ -3,9 +3,12 @@
 %----------------Project-Description-Spacer--------
 
 \newcommand{\resumeProjectDescription}[2]{
+    \vspace{-0.5cm}
     \resumeItem{\emph{#1}}
     \vspace{-0.23cm}    %   Space was originally -0.25cm but this created an un-aesthetic look at the project description when bolded. Revert to -0.25cm if project count is 3 or less
+    % {\hspace*{0.2cm}
     \resumeItem{#2}
+    % }
 }
 
 \newcommand{\spaceReducer}{ % To be used outside the functions and strictly after the section end to reduce space between sections
