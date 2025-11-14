@@ -1,0 +1,22 @@
+# Local Build Files from `pdflatex` and `latexmk` compilation
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.pdf
+*.dvi
+*.ps
+*.gz
+*.zip
