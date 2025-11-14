@@ -20,3 +20,5 @@
 *.ps
 *.gz
 *.zip
+*.DS_Store
+
